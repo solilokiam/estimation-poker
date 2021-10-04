@@ -19,12 +19,12 @@ const CARDS = [
     {code: '☕', color:'#0a0213'},
 ];
 
-const Board = () => {
+const Board = ({room}) => {
     const [selectedCard, selectCard] = useState(null);
     const [votes, setVotes] = useState({});
     const [name, setName] = useState(null);
 
-    const [channel, ably] = useChannel("estimate", (message) => {
+    const [channel, ably] = useChannel(`estimate-${room}`, (message) => {
         if (message.name === VOTE) {
             const newVotes = {...votes};
             newVotes[`${message.data.card}`] = votes[`${message.data.card}`] ? [...votes[`${message.data.card}`], message.data.name] : [message.data.name];
