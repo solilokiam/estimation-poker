@@ -17,7 +17,7 @@ const NameForm = ({ onSetName }) => {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8">
                 <div className="text-center">
-                    <Image src="/poker.svg" width={200} height={200} />
+                    <Image src="/poker.svg" width={200} height={200} alt="Poker Player" />
                 </div>
                 <div>
                     <h2 className ="mt-6 text-center text-3xl font-extrabold text-gray-900">
